@@ -1,0 +1,264 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    font-style: normal;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #34495e;
+    /* Darker Blue background */
+    color: #ecf0f1;
+    /* Light gray text */
+    padding: 20px 0;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    /* More pronounced shadow */
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: #2c3e50;
+    /* Slightly lighter on hover */
+}
+
+header .titlecontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1.logo {
+    font-family: "Roboto", sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #ecf0f1;
+    letter-spacing: 3px;
+    /* Increased spacing for logo effect */
+    text-transform: uppercase;
+    margin: 0;
+    font-style: italic;
+    /* Logo now italicized for a modern touch */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 20px;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    /* Light gray links */
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1abc9c;
+    /* Highlight color on hover */
+    border-bottom: 3px solid #1abc9c;
+    /* Thicker border on hover */
+}
+
+nav ul li a:focus {
+    outline: none;
+    border-bottom: 3px solid #e74c3c;
+    /* Red focus outline */
+}
+
+/* Global Section Styles */
+.section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+    /* Light gray background for sections */
+    border-bottom: 1px solid #ddd;
+    /* Subtle border at the bottom */
+}
+
+.section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+.section p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Skills Section */
+.skills {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.skill {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.skill ul {
+    list-style-type: none;
+}
+
+.skill ul li {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+/* Button Styles */
+.button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+    /* Slight scale effect on hover */
+}
+
+/* Project Section */
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.project {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 45%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.project p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    font-style: normal;
+}
+
+/* Hover effect for skill and project */
+.skill:hover,
+.project:hover {
+    transform: translateY(-12px);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.3rem;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Adjust skill width for smaller screens */
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    /* Stacked project cards */
+    .project {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Additional Global Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
